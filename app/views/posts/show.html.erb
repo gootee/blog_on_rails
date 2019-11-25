@@ -1,0 +1,68 @@
+<!-- <h3>Show Page</h3> -->
+
+<div class="show_page">
+  <h1 class="post_title"><%= @post.title %></h1>
+  <p class="post_body"><%= @post.body %></p>
+  <small class="posted_ago">Posted <%= time_ago_in_words(@post.created_at) %> ago</small>
+
+  <div class="buttons">
+    <%= link_to "Edit", 
+      edit_post_path(@post),
+      :class => 'btn btn-outline-primary'  %>
+
+    <%= link_to "Delete", 
+      post_path(@post), 
+      method: :delete, data: {confirm: "Are you sure?"},
+      :class => 'btn btn-outline-primary' %>
+  </div>
+
+  <h2 class="comment_title">Comment</h2>
+  <%= form_with model: [@post, @comment], local:true do |f| %>
+  
+    <% if @comment.errors.any? %>
+      <ul>
+        <% @comment.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  
+    <div class="form-group">
+      <%= f.text_area(
+      :body,
+      cols: 50,
+      rows: 5,
+      placeholder: "Any comments?",
+      class: "form-control"
+      ) %>
+    </div>
+    <div class="submit_button">
+      <%= f.submit "Submit", :class => 'btn btn-outline-primary' %>
+    </div>
+  <% end %>
+  
+  <ul class="comment-list">
+    <% if @comments!= nil%>
+      <% @comments.each do |comment| %>
+        <li class="post_comment">
+          <p>Comment: <%= comment.body %> <br />
+            <small>
+              Created <%= time_ago_in_words(comment.created_at) %> ago
+            </small>    
+            • 
+            <small>          
+              <%= link_to(
+                "Delete",
+                post_comment_path(@post, comment),
+                method: :delete,
+                data: {
+                  confirm: "Are you sure?"
+                }
+              ) %>
+            </small>
+          </p>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>  
+</div>

@@ -1,0 +1,13 @@
+
+
+new.html.erb
+<% form_for(@my_object) do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Create' %>
+<% end %>
+_form.html.erb
+<% if f.object.class.is_a? MyClass %>
+ <%# do something... %>
+<% elsif f.object.is_a? MyOtherClass %>
+  <%# do something else... %>
+<% end %>

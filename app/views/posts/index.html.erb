@@ -1,0 +1,10 @@
+<!-- <h1>All Posts#index</h1> -->
+
+<div class="post_index">
+    <% @posts.each do |post| %>
+        <div class="post_display">
+            <h2 class="post_link"><%= link_to post.title, post_path(post) %></h2>
+            <p class="post_text"><%= post.body %></p>
+        </div>
+    <% end %>    
+</div>

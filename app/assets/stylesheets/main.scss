@@ -1,0 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgrey;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.app_title {
+  font-size: 36px;
+  color: dodgerblue
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 145px;
+}
+
+.post_input {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.post_link {
+  // color: blue;
+  font-size: 24px;
+}
+
+.post_display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between; 
+  height: 125px;
+  width: 600px;
+  padding: 1.5em;
+  border: lightgrey;
+  border-width: 1px;
+  border-style: solid;
+  margin: 5px;
+}
+
+.post_text {
+  white-space: nowrap; 
+  width: 550px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  margin: 1em 0 0 0;
+  width: 135px;
+}
+
+.post_index {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.post_title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.post_body {
+  margin: 1em 0;
+}
+
+.show_page {
+  padding: 1em;
+}
+
+.posted_ago {
+  margin: 1em 0;
+}
+
+.buttons {
+  margin: 1em 0;
+}
+
+.submit_button {
+  margin: 1em 0;
+}
+
+.post_comment {
+  margin: 1em 0;
+}
+.input_field {
+  display:flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.comment_title {
+  font-weight: bold;
+  font-size: 24px; 
+  margin: 1em 0;
+}
